@@ -1,9 +1,5 @@
 # PetProject
 
-> My astounding Nuxt.js project
-> API Key: b027ca53402e956d0263454f53282067
-> API Secret: 7fb8c107bea140d9b323d015f77a6302
-
 ## Build Setup
 
 ``` bash
