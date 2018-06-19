@@ -1,7 +1,8 @@
 <template>
-    <v-jumbotron
-      :src="require('~/assets/img/logo.png')"
-      :gradient="gradient"
+  <div>
+    <v-jumbotron 
+      :src="require('~/assets/img/hedgehog-468228_1920.jpg')"
+      :gradient="gradient"    
       dark>
       <v-container fill-height>
         <v-layout align-center>
@@ -15,14 +16,53 @@
         </v-layout>
       </v-container>
     </v-jumbotron>
+
+    <v-container fluid>
+      <v-layout row wrap>
+        <v-flex v-for="pets in petInfos" :key="pets.title" xs12 sm12 md12 lg4 xl4>
+          <v-card target="_blank" :href="url" height="200px" class="elevation-6">
+            <v-container fluid grid-list-xs>
+              <v-layout row wrap>
+                <v-flex d-flex xs6>
+                  <v-card-title>
+                    <div>
+                      <div class="headline">{{pets.title}}</div>
+                      <div class="subheading">{{pets.description}}</div>
+                    </div>
+                    <v-card-actions>
+                      <v-btn class="orange lighten-1">Learn More</v-btn>
+                    </v-card-actions>
+                  </v-card-title>
+                </v-flex>
+                <v-flex d-flex xs6>
+                  <v-card-media
+                    :src="pets.image"
+                    height="200px"
+                    contain
+                  ></v-card-media>
+                </v-flex>
+              </v-layout>
+            </v-container>
+          </v-card>
+        </v-flex>
+      </v-layout>
+    </v-container>
+
+  </div>
 </template>
 
+<style scoped>
+.card {
+  margin: 0px 10px 20px 10px;
+}
+</style>
+
+
 <script>
-const imgUrl = require('~/assets/img/logo.png')
 export default {
   data () {
     return {
-      gradient: 'to top right, black, gray 80%',
+      gradient: 'to top right, rgba(0, 0, 0, 0.8), rgba(128, 128, 128, .6)',
       petInfos: [
         {
           title: 'Dog',
