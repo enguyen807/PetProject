@@ -1,9 +1,10 @@
 <template>
-  <div>
+  <div app>
     <v-jumbotron 
       :src="require('~/assets/img/hedgehog-468228_1920.jpg')"
       :gradient="gradient"    
-      dark>
+      dark
+      app>
       <v-container fill-height>
         <v-layout align-center>
           <v-flex>
@@ -17,7 +18,7 @@
       </v-container>
     </v-jumbotron>
 
-    <v-container fluid>
+    <v-container fluid style="padding-left: 0px; padding-right: 0px" app>
       <v-layout row wrap>
         <v-flex v-for="pets in petInfos" :key="pets.title" xs12 sm12 md12 lg4 xl4>
           <v-card target="_blank" :href="url" height="200px" class="elevation-6">
@@ -34,10 +35,39 @@
                     </v-card-actions>
                   </v-card-title>
                 </v-flex>
-                <v-flex d-flex xs6>
+                <v-flex d-flex xs6 >
                   <v-card-media
                     :src="pets.image"
-                    height="200px"
+                    contain
+                  ></v-card-media>
+                </v-flex>
+              </v-layout>
+            </v-container>
+          </v-card>
+        </v-flex>
+      </v-layout>
+    </v-container>
+
+    <v-container fluid style="padding-left: 0px; padding-right: 0px; margin-bottom: 100px;" app>
+      <v-layout row wrap>
+        <v-flex v-for="pets in petInfos" :key="pets.title" xs12 sm12 md12 lg4 xl4>
+          <v-card target="_blank" :href="url" height="200px" class="elevation-6">
+            <v-container fluid grid-list-xs>
+              <v-layout row wrap>
+                <v-flex d-flex xs6>
+                  <v-card-title>
+                    <div>
+                      <div class="headline">{{pets.title}}</div>
+                      <div class="subheading">{{pets.description}}</div>
+                    </div>
+                    <v-card-actions>
+                      <v-btn class="orange lighten-1">Learn More</v-btn>
+                    </v-card-actions>
+                  </v-card-title>
+                </v-flex>
+                <v-flex d-flex xs6 >
+                  <v-card-media
+                    :src="pets.image"
                     contain
                   ></v-card-media>
                 </v-flex>
@@ -54,6 +84,7 @@
 <style scoped>
 .card {
   margin: 0px 10px 20px 10px;
+  padding: 10px;
 }
 </style>
 

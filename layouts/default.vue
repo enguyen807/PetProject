@@ -40,13 +40,8 @@
         <nuxt />
       </v-container>
     </v-content>
-    <v-footer
-      :fixed="$options.footer_fixed"
-      :inset="$options.footer_inset"
-      app
-    >
-      <span>&copy; 2017</span>
-    </v-footer>
+    
+    <MyFooter></MyFooter>
   </v-app>
 </template>
 
@@ -56,7 +51,7 @@
     footer_inset: true,
     drawer_fixed: true,
     toolbar_fixed: true,
-    footer_fixed: true,
+    footer_fixed: false,
     drawer_clipped: true,
     data() {
       return {
