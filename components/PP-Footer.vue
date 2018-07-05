@@ -9,19 +9,19 @@
       <v-card-text>
         <v-layout>
           <v-flex
-            v-for="(col, i) in rows"
-            :key="i"
+            v-for="(col, cr) in rows"
+            :key="cr"
             xs3
           >
             <span class="body-2" v-text="col.title.toUpperCase()"></span>
             <div
-              v-for="(child, ie) in col.children"
-              :key="ie"
+              v-for="(child, colChild) in col.children"
+              :key="colChild"
               v-text="child"
             ></div>
             <v-btn
-              v-for="(icon, icons) in col.icons"
-              :key="icons"
+              v-for="(icon, colIcons) in col.icons"
+              :key="colIcons"
               icon
               dark
               class="mx-3 orange lighten-1"

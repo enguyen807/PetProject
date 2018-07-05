@@ -12,8 +12,8 @@
         <v-list-tile
           router
           :to="item.to"
-          :key="i"
-          v-for="(item, i) in items"
+          :key="navDrawItems"
+          v-for="(item, navDrawItems) in items"
           exact
         >
           <v-list-tile-action>
