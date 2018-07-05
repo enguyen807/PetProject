@@ -8,7 +8,7 @@
       <v-container fill-height>
         <v-layout align-center>
           <v-flex>
-            <h3 class="display-3">Welcome to the site</h3>
+            <h1 class="display-4">Welcome to the site</h1>
             <span class="subheading">Lorem ipsum dolor sit amet, pri veniam forensibus id. Vis maluisset molestiae id, ad semper lobortis cum. At impetus detraxit incorrupte usu, repudiare assueverit ex eum, ne nam essent vocent admodum.</span>
             <v-divider class="my-3"></v-divider>
             <div class="title mb-3">Check out our newest features!</div>
@@ -18,11 +18,11 @@
       </v-container>
     </v-jumbotron>
 
-    <v-container fluid style="padding-left: 0px; padding-right: 0px" app>
+    <v-container fluid class="pl-0 pr-0" app>
       <v-layout row wrap>
         <v-flex v-for="pets in petInfos" :key="pets.title" xs12 sm12 md12 lg4 xl4>
-          <v-card target="_blank" :href="url" height="200px" class="elevation-6">
-            <v-container fluid grid-list-xs>
+          <v-card target="_blank" :href="url" class="elevation-6 ">
+            <v-container grid-list-xs>
               <v-layout row wrap>
                 <v-flex d-flex xs6>
                   <v-card-title>
@@ -48,43 +48,16 @@
       </v-layout>
     </v-container>
 
-    <v-container fluid style="padding-left: 0px; padding-right: 0px; margin-bottom: 100px;" app>
-      <v-layout row wrap>
-        <v-flex v-for="pets in petInfos" :key="pets.title" xs12 sm12 md12 lg4 xl4>
-          <v-card target="_blank" :href="url" height="200px" class="elevation-6">
-            <v-container fluid grid-list-xs>
-              <v-layout row wrap>
-                <v-flex d-flex xs6>
-                  <v-card-title>
-                    <div>
-                      <div class="headline">{{pets.title}}</div>
-                      <div class="subheading">{{pets.description}}</div>
-                    </div>
-                    <v-card-actions>
-                      <v-btn class="orange lighten-1">Learn More</v-btn>
-                    </v-card-actions>
-                  </v-card-title>
-                </v-flex>
-                <v-flex d-flex xs6 >
-                  <v-card-media
-                    :src="pets.image"
-                    contain
-                  ></v-card-media>
-                </v-flex>
-              </v-layout>
-            </v-container>
-          </v-card>
-        </v-flex>
-      </v-layout>
-    </v-container>
-
+    <LearnMore></LearnMore>
   </div>
 </template>
 
 <style scoped>
-.card {
+.divider-width {
+  width: 40%;
+}
+.v-card {
   margin: 0px 10px 20px 10px;
-  padding: 10px;
 }
 </style>
 

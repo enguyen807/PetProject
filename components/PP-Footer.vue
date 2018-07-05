@@ -1,7 +1,8 @@
 <template>
   <v-footer app
-            class="dark--text"
+            class="dark--text d-inline-block"
             :inset="$options.footer_inset"
+            :footer="$options.footer_fixed"
              >
 
     <v-card flat tile class="flex" color="green darken-1">
@@ -57,7 +58,7 @@
 </template>
 
 <style scoped>
-  .footer--fixed {
+  .v-footer--fixed {
     position: absolute;
   }
 </style>
@@ -71,7 +72,7 @@
         {
           title: 'Company Name',
           children: ['Here you can use rows and columns here to organize your footer content. Lorem ipsum dolor sit amet, consectetur adipisicing elit'],
-          icons: ['fab fa-facebook', 'fab fa-twitter', 'fab fa-google-plus', 'fab fa-linkedin', 'fab fa-instagram']
+          icons: ['fab fa-facebook', 'fab fa-twitter', 'fab fa-google-plus', 'fab fa-instagram']
         },
         {
           title: 'Products',

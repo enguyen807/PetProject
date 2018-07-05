@@ -1,8 +1,10 @@
 import Vue from 'vue';
 import Vuetify from 'vuetify';
-import MyFooter from '~/components/Footer.vue';
+import LearnMore from '~/components/PP-LearnMore.vue';
+import MyFooter from '~/components/PP-Footer.vue';
 import colors from 'vuetify/es5/util/colors';
 
+Vue.component('LearnMore', LearnMore);
 Vue.component('MyFooter', MyFooter);
 
 Vue.use(Vuetify, {
