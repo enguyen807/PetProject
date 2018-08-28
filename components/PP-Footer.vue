@@ -2,16 +2,16 @@
   <v-footer app
             class="dark--text d-inline-block"
             :inset="$options.footer_inset"
-            :footer="$options.footer_fixed"
              >
 
     <v-card flat tile class="flex" color="green darken-1">
       <v-card-text>
-        <v-layout>
+        <v-layout >
           <v-flex
             v-for="(col, cr) in rows"
             :key="cr"
-            xs3
+            style="margin: 0 auto"
+            xs2
           >
             <span class="body-2" v-text="col.title.toUpperCase()"></span>
             <div
@@ -24,7 +24,7 @@
               :key="colIcons"
               icon
               dark
-              class="mx-3 orange lighten-1"
+              class="mx-2 orange lighten-1"
             >
               <v-icon size="24px">{{ icon }}</v-icon>
             </v-btn>
@@ -50,9 +50,6 @@
           </v-flex>
         </v-layout>
       </v-card-text>
-      <v-card-actions class="grey lighten-2 justify-center">
-        &copy;2018 — <strong>Vuetify</strong>
-      </v-card-actions>
     </v-card>
   </v-footer>
 </template>

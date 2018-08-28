@@ -21,7 +21,7 @@
     <v-container fluid class="pl-0 pr-0" app>
       <v-layout row wrap>
         <v-flex v-for="pets in petInfos" :key="pets.title" xs12 sm12 md12 lg4 xl4>
-          <v-card target="_blank" :href="url" class="elevation-6 ">
+          <v-card target="_blank" class="elevation-6 ">
             <v-container grid-list-xs>
               <v-layout row wrap>
                 <v-flex d-flex xs6>
@@ -31,7 +31,7 @@
                       <div class="subheading">{{pets.description}}</div>
                     </div>
                     <v-card-actions>
-                      <v-btn class="orange lighten-1">Learn More</v-btn>
+                      <v-btn class="orange lighten-1" :to="pets.to">Learn More</v-btn>
                     </v-card-actions>
                   </v-card-title>
                 </v-flex>
@@ -71,7 +71,8 @@ export default {
         {
           title: 'Dog',
           image: require('~/assets/img/cute-3049614_640.jpg'),
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+          to: '/dog'
         },
         {
           title: 'Cat',

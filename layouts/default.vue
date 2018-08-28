@@ -2,10 +2,10 @@
   <v-app light>
     <v-navigation-drawer
       v-model="drawer"
-      class="grey lighten-2"
+      style="max-height: 100%"
+      class="grey lighten-3"
       mobile-break-point="1080px"
       :clipped="$options.drawer_clipped"
-      :fixed="$options.drawer_fixed"
       app
     >
       <v-list>
@@ -39,9 +39,8 @@
       <v-container fluid>
         <nuxt />
       </v-container>
-    </v-content>
-    
-    <MyFooter></MyFooter>
+    </v-content>   
+    <!-- <MyFooter></MyFooter> -->
   </v-app>
 </template>
 

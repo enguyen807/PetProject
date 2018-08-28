@@ -17,17 +17,17 @@
     "express": "^4.16.3",
     "feathers": "^2.0.3",
     "feathers-configuration": "^0.3.3",
-    "nuxt": "^1.0.0",
-    "vuetify": "^1.1.1"
+    "nuxt": "^1.4.2",
+    "vuetify": "^1.1.14"
   },
   "devDependencies": {
-    "cross-env": "^5.0.1",
-    "babel-eslint": "^8.2.1",
+    "babel-eslint": "^8.2.6",
+    "cross-env": "^5.2.0",
     "eslint": "^4.15.0",
-    "eslint-loader": "^2.0.0",
-    "eslint-plugin-vue": "^4.0.0",
+    "eslint-loader": "^2.1.0",
+    "eslint-plugin-vue": "^4.7.1",
+    "nodemon": "^1.18.3",
     "stylus": "^0.54.5",
-    "stylus-loader": "^3.0.1",
-    "nodemon": "^1.11.0"
+    "stylus-loader": "^3.0.1"
   }
 }
